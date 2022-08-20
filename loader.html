@@ -1,0 +1,53 @@
+<div id="guiconsole-loader">
+<style>
+/*
+
+Made by Nyanport
+
+Original CSS from StackOverflow with no copyright or license attached
+
+
+*/
+/*
+THE FOLLOWING CODE IS NOT COPYRIGHTED.
+
+This CSS code is allowed to be used by anybody under commercial or non-commercial purpose.
+*/
+guiconsole {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  /*line-height: var(--lh-md);*/
+  color: #555555;
+  background-color: hsl(0, 0%, 96.5%);
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+  overflow: auto;
+  scrollbar-color: hsla(0,0%,0%,0.2) transparent;
+}
+guiconsole span {
+  padding: 2px;
+}
+</style>
+</head>
+<body>
+<script>
+class guiConsole {
+  constructor() {
+    this.element = document.getElementsByTagName("body")[0].appendChild(document.createElement('guiconsole'));
+  }
+  log(text) {
+    console.log(this);
+    var newLog = document.createElement("span");
+    newLog.innerText = text;
+    this.element.appendChild(newLog);
+  }
+}
+
+////////////////////////////////////////////////////
+const myGC = new guiConsole();
+myGC.log("test")
+</script>
+</div>
